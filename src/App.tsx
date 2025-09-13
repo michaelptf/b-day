@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import PasswordGate from './components/PasswordGate';
-import BirthdayCard from './components/BirthdayCard';
+import React, { useState } from "react";
+import PasswordGate from "./components/PasswordGate";
+import BirthdayCard from "./components/BirthdayCard";
 
 const App: React.FC = () => {
   const [isUnlocked, setIsUnlocked] = useState(false);
@@ -10,7 +10,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className={`app-background ${isUnlocked ? "unlocked" : ""}`}>
       {isUnlocked ? <BirthdayCard /> : <PasswordGate onUnlock={handleUnlock} />}
     </div>
   );
