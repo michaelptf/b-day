@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Container, Card, Alert } from "react-bootstrap";
+import styles from "./styles/PasswordGate.module.css";
 
 const PasswordGate: React.FC<{ onUnlock: () => void }> = ({ onUnlock }) => {
   const [password, setPassword] = useState("");
@@ -7,7 +7,7 @@ const PasswordGate: React.FC<{ onUnlock: () => void }> = ({ onUnlock }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "love") {
+    if (password === "cutecutelenglengsorbb") {
       onUnlock();
     } else {
       setError(true);
@@ -16,43 +16,35 @@ const PasswordGate: React.FC<{ onUnlock: () => void }> = ({ onUnlock }) => {
   };
 
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
-      <Card
-        className="shadow-lg"
-        style={{ minWidth: "300px", maxWidth: "400px" }}
-      >
-        <Card.Body className="p-4">
-          <Card.Title className="text-center mb-4">
-            <h2 className="text-primary">🎁 What's the Secret Password? 🎁</h2>
-          </Card.Title>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-              <Form.Control
-                type="password"
+    <div className={styles.comicContainer}>
+      <div className={styles.comicBubble}>
+        <div className={styles.comicContent}>
+          {/* <h2 className={styles.comicTitle}>Good Morning baby ❤️</h2> */}
+          <div className={styles.comicQuestion}>
+            <p>Do you know today is who's birthday?</p>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="cutecutelenglengsorbb"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter the magic words..."
-                className="text-center"
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setPassword(e.target.value)
+                }
+                className={styles.comicInput}
                 autoFocus
               />
-            </Form.Group>
-            <div className="d-grid gap-2">
-              <Button variant="primary" size="lg" type="submit">
-                Unlock the Surprise! 🎉
-              </Button>
-            </div>
-            {error && (
-              <Alert variant="danger" className="mt-3 text-center">
-                Oops! That's not quite right. Try again! 🤔
-              </Alert>
-            )}
-          </Form>
-        </Card.Body>
-      </Card>
-    </Container>
+              <button type="submit" className={styles.comicButton}>
+                ✨ Open! ✨
+              </button>
+              {error && (
+                <div className={styles.comicError}>
+                  <p>🤔 Hmm... that's not quite it! Try again!</p>
+                </div>
+              )}
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
