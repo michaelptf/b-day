@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/b-day/static/css/main.fc6c48f9.css",
+    "main.js": "/b-day/static/js/main.7f5cfcb2.js",
+    "static/media/before.jpeg": "/b-day/static/media/before.aa41daef6cd0121dc133.jpeg",
+    "static/media/bgimage.jpeg": "/b-day/static/media/bgimage.defa4bf8c5bd6114a48b.jpeg",
+    "index.html": "/b-day/index.html",
+    "main.fc6c48f9.css.map": "/b-day/static/css/main.fc6c48f9.css.map",
+    "main.7f5cfcb2.js.map": "/b-day/static/js/main.7f5cfcb2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc6c48f9.css",
+    "static/js/main.7f5cfcb2.js"
+  ]
+}
