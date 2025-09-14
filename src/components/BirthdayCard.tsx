@@ -6,7 +6,7 @@ const BirthdayCard = () => {
   const [showMessage, setShowMessage] = useState(false);
   const [messageIndex, setMessageIndex] = useState(0);
   const messages = [
-    "🎂 Happy Birthday 🎂",
+    "🎈 Surprise! 🎈",
     "You are the best bb!",
     "Here's to another year of adventures! woohoo",
   ];
@@ -35,7 +35,7 @@ const BirthdayCard = () => {
           />
         </div>
         <div className={styles.comicMessage}>
-          {showMessage ? "🎈 Surprise! 🎈" : messages[messageIndex]}
+          {showMessage ? "🎂 Happy Birthday 🎂" : messages[messageIndex]}
         </div>
         {showMessage && <Confetti trigger={true} />}
       </div>
