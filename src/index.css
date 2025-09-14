@@ -1,4 +1,15 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+/* Preload font */
+@font-face {
+  font-family: "Patrick Hand";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/patrickhand/v20/LDI1apSQOAYtSuYWp8ZhfYe8UcLLubg.woff2)
+    format("woff2");
+}
 
 body {
   margin: 0;
